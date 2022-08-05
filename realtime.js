@@ -72,6 +72,8 @@ var initServerStatusGetter = function(serverId) {
       } else {
         data = data.data;
 
+        //        console.log('got data [' + JSON.stringify(data) + ']');
+        
         if (data && data.players) {
           for (var i = 0; i < data.players.length; ++i) {
             var nicknameAnsi = data.players[i].nickname_ansi;

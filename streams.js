@@ -31,6 +31,9 @@ function startStream(id, source) {
         startStream(id, source);
       }, 2000);
     } else {
+
+      //	console.log('got data [' + JSON.stringify(data) + ']');
+	
       if (data.success.time < streamStart[id][source]) {
         return;
       }

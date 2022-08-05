@@ -160,7 +160,10 @@ exports.start = function(io, apis) {
               return;
             }
             if (data.message) {
-              data.message = data.message.substring(0, Math.min(80, data.message.length)).replace(/§./g, '').replace(/\x7f./g, '');
+              //
+              // this determines max webchat message length
+              //
+              data.message = data.message.substring(0, Math.min(200, data.message.length)).replace(/§./g, '').replace(/\x7f./g, '');
 
               var now = new Date().getTime();
               var nextChatDelay = 600;
